@@ -15,6 +15,16 @@
 		C5102A731BB24C720034D291 /* userImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5102A721BB24C720034D291 /* userImage@2x.png */; };
 		C51993AD1BB2AC92004EACC9 /* ActivityListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C51993AB1BB2AC92004EACC9 /* ActivityListTableViewCell.m */; };
 		C51993AE1BB2AC92004EACC9 /* ActivityListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C51993AC1BB2AC92004EACC9 /* ActivityListTableViewCell.xib */; };
+		C51993B31BB2B7C5004EACC9 /* ActivityModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C51993B21BB2B7C5004EACC9 /* ActivityModel.m */; };
+		C51993B71BB2BF19004EACC9 /* ActivityPhotosModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C51993B61BB2BF19004EACC9 /* ActivityPhotosModel.m */; };
+		C51993BC1BB2C418004EACC9 /* shaixuan_act@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C51993BA1BB2C418004EACC9 /* shaixuan_act@2x.png */; };
+		C51993BD1BB2C418004EACC9 /* shaixuan@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C51993BB1BB2C418004EACC9 /* shaixuan@2x.png */; };
+		C51993C41BB2C436004EACC9 /* collect_red@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C51993BE1BB2C436004EACC9 /* collect_red@2x.png */; };
+		C51993C51BB2C436004EACC9 /* collecteAct@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C51993BF1BB2C436004EACC9 /* collecteAct@2x.png */; };
+		C51993C61BB2C436004EACC9 /* isFree@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C51993C01BB2C436004EACC9 /* isFree@2x.png */; };
+		C51993C71BB2C436004EACC9 /* jionAct@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C51993C11BB2C436004EACC9 /* jionAct@2x.png */; };
+		C51993C81BB2C436004EACC9 /* share@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C51993C21BB2C436004EACC9 /* share@2x.png */; };
+		C51993C91BB2C436004EACC9 /* shareAct@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C51993C31BB2C436004EACC9 /* shareAct@2x.png */; };
 		C56F5B831BB0F20A003D378C /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = C56F5B401BB0F20A003D378C /* AFHTTPRequestOperation.m */; };
 		C56F5B841BB0F20A003D378C /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C56F5B421BB0F20A003D378C /* AFHTTPRequestOperationManager.m */; };
 		C56F5B851BB0F20A003D378C /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C56F5B441BB0F20A003D378C /* AFHTTPSessionManager.m */; };
@@ -124,6 +134,18 @@
 		C51993AA1BB2AC92004EACC9 /* ActivityListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityListTableViewCell.h; sourceTree = "<group>"; };
 		C51993AB1BB2AC92004EACC9 /* ActivityListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityListTableViewCell.m; sourceTree = "<group>"; };
 		C51993AC1BB2AC92004EACC9 /* ActivityListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityListTableViewCell.xib; sourceTree = "<group>"; };
+		C51993B11BB2B7C5004EACC9 /* ActivityModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityModel.h; sourceTree = "<group>"; };
+		C51993B21BB2B7C5004EACC9 /* ActivityModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityModel.m; sourceTree = "<group>"; };
+		C51993B51BB2BF19004EACC9 /* ActivityPhotosModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityPhotosModel.h; sourceTree = "<group>"; };
+		C51993B61BB2BF19004EACC9 /* ActivityPhotosModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityPhotosModel.m; sourceTree = "<group>"; };
+		C51993BA1BB2C418004EACC9 /* shaixuan_act@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shaixuan_act@2x.png"; sourceTree = "<group>"; };
+		C51993BB1BB2C418004EACC9 /* shaixuan@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shaixuan@2x.png"; sourceTree = "<group>"; };
+		C51993BE1BB2C436004EACC9 /* collect_red@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "collect_red@2x.png"; sourceTree = "<group>"; };
+		C51993BF1BB2C436004EACC9 /* collecteAct@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "collecteAct@2x.png"; sourceTree = "<group>"; };
+		C51993C01BB2C436004EACC9 /* isFree@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "isFree@2x.png"; sourceTree = "<group>"; };
+		C51993C11BB2C436004EACC9 /* jionAct@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "jionAct@2x.png"; sourceTree = "<group>"; };
+		C51993C21BB2C436004EACC9 /* share@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "share@2x.png"; sourceTree = "<group>"; };
+		C51993C31BB2C436004EACC9 /* shareAct@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shareAct@2x.png"; sourceTree = "<group>"; };
 		C56F5B3F1BB0F20A003D378C /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
 		C56F5B401BB0F20A003D378C /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
 		C56F5B411BB0F20A003D378C /* AFHTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperationManager.h; sourceTree = "<group>"; };
@@ -338,6 +360,8 @@
 		C5102A661BB24C350034D291 /* NavImage */ = {
 			isa = PBXGroup;
 			children = (
+				C51993BA1BB2C418004EACC9 /* shaixuan_act@2x.png */,
+				C51993BB1BB2C418004EACC9 /* shaixuan@2x.png */,
 				C5102A671BB24C350034D291 /* nav_top_search@2x.png */,
 			);
 			path = NavImage;
@@ -384,6 +408,54 @@
 				C51993AC1BB2AC92004EACC9 /* ActivityListTableViewCell.xib */,
 			);
 			path = ActivityListCell;
+			sourceTree = "<group>";
+		};
+		C51993AF1BB2B7A1004EACC9 /* ActivityModels */ = {
+			isa = PBXGroup;
+			children = (
+				C51993B41BB2BF00004EACC9 /* ActivityPhotosModel */,
+				C51993B01BB2B7A1004EACC9 /* ActivityModel */,
+			);
+			path = ActivityModels;
+			sourceTree = "<group>";
+		};
+		C51993B01BB2B7A1004EACC9 /* ActivityModel */ = {
+			isa = PBXGroup;
+			children = (
+				C51993B11BB2B7C5004EACC9 /* ActivityModel.h */,
+				C51993B21BB2B7C5004EACC9 /* ActivityModel.m */,
+			);
+			path = ActivityModel;
+			sourceTree = "<group>";
+		};
+		C51993B41BB2BF00004EACC9 /* ActivityPhotosModel */ = {
+			isa = PBXGroup;
+			children = (
+				C51993B51BB2BF19004EACC9 /* ActivityPhotosModel.h */,
+				C51993B61BB2BF19004EACC9 /* ActivityPhotosModel.m */,
+			);
+			path = ActivityPhotosModel;
+			sourceTree = "<group>";
+		};
+		C51993B81BB2C076004EACC9 /* Activity */ = {
+			isa = PBXGroup;
+			children = (
+				C51993B91BB2C076004EACC9 /* ActivityCellImages */,
+			);
+			path = Activity;
+			sourceTree = "<group>";
+		};
+		C51993B91BB2C076004EACC9 /* ActivityCellImages */ = {
+			isa = PBXGroup;
+			children = (
+				C51993BE1BB2C436004EACC9 /* collect_red@2x.png */,
+				C51993BF1BB2C436004EACC9 /* collecteAct@2x.png */,
+				C51993C01BB2C436004EACC9 /* isFree@2x.png */,
+				C51993C11BB2C436004EACC9 /* jionAct@2x.png */,
+				C51993C21BB2C436004EACC9 /* share@2x.png */,
+				C51993C31BB2C436004EACC9 /* shareAct@2x.png */,
+			);
+			path = ActivityCellImages;
 			sourceTree = "<group>";
 		};
 		C56F5B3D1BB0F20A003D378C /* AFNetworking */ = {
@@ -681,6 +753,7 @@
 		C5971FC11BABF8F000707F54 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				C51993AF1BB2B7A1004EACC9 /* ActivityModels */,
 				C56F5BA81BB0F31C003D378C /* BaseModel */,
 				C56F5BA31BB0F2A1003D378C /* NearbyModels */,
 			);
@@ -849,6 +922,7 @@
 		C5F0367C1BACE8A7008E8F11 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				C51993B81BB2C076004EACC9 /* Activity */,
 				C5102A621BB24C350034D291 /* Nearby */,
 				C5F0367D1BACE8A7008E8F11 /* TabBar */,
 			);
@@ -967,7 +1041,11 @@
 			files = (
 				C5F3D2451BAFAB70005DCD6C /* icon-topSel@2x.png in Resources */,
 				C5F3D2F61BB02858005DCD6C /* icon-top@2x.png in Resources */,
+				C51993C51BB2C436004EACC9 /* collecteAct@2x.png in Resources */,
+				C51993C91BB2C436004EACC9 /* shareAct@2x.png in Resources */,
+				C51993C71BB2C436004EACC9 /* jionAct@2x.png in Resources */,
 				C5102A711BB24C350034D291 /* girl@2x.png in Resources */,
+				C51993BC1BB2C418004EACC9 /* shaixuan_act@2x.png in Resources */,
 				C56F5B8C1BB0F20A003D378C /* LICENSE in Resources */,
 				C5C4B5FA1BAE554100167137 /* TabBar4Sel@2x.png in Resources */,
 				C5C4B5F81BAE554100167137 /* TabBar2Sel@2x.png in Resources */,
@@ -977,12 +1055,16 @@
 				C5102A731BB24C720034D291 /* userImage@2x.png in Resources */,
 				C5971FAB1BABF7EC00707F54 /* LaunchScreen.xib in Resources */,
 				C5C4B5F91BAE554100167137 /* TabBar4@2x.png in Resources */,
+				C51993BD1BB2C418004EACC9 /* shaixuan@2x.png in Resources */,
 				C51993AE1BB2AC92004EACC9 /* ActivityListTableViewCell.xib in Resources */,
 				C56F5BB91BB0F634003D378C /* UserListTableViewCell.xib in Resources */,
 				C5C4B5FC1BAE554100167137 /* TabBar5Sel@2x.png in Resources */,
+				C51993C81BB2C436004EACC9 /* share@2x.png in Resources */,
 				C5C4B5FB1BAE554100167137 /* TabBar5@2x.png in Resources */,
+				C51993C61BB2C436004EACC9 /* isFree@2x.png in Resources */,
 				C5102A6D1BB24C350034D291 /* juli@2x.png in Resources */,
 				C5971FA81BABF7EC00707F54 /* Images.xcassets in Resources */,
+				C51993C41BB2C436004EACC9 /* collect_red@2x.png in Resources */,
 				C5102A6F1BB24C350034D291 /* nav_top_search@2x.png in Resources */,
 				C5C4B5F61BAE554100167137 /* TabBar1Sel@2x.png in Resources */,
 				C5102A6E1BB24C350034D291 /* juxie@2x.png in Resources */,
@@ -1057,8 +1139,10 @@
 				C5971FE11BAC0B6800707F54 /* GZLHelper.m in Sources */,
 				C56F5B9F1BB0F20A003D378C /* UIImage+MultiFormat.m in Sources */,
 				C5971FF31BAC2B1800707F54 /* ActivityViewController.m in Sources */,
+				C51993B71BB2BF19004EACC9 /* ActivityPhotosModel.m in Sources */,
 				C56F5C051BB16FEF003D378C /* JHRefreshCommonAniView.m in Sources */,
 				C5F036B21BAD28B8008E8F11 /* GZLTabBarButton.m in Sources */,
+				C51993B31BB2B7C5004EACC9 /* ActivityModel.m in Sources */,
 				C56F5C071BB16FEF003D378C /* JHRefreshBaseView.m in Sources */,
 				C56F5B951BB0F20A003D378C /* NSData+ImageContentType.m in Sources */,
 				C56F5C0C1BB16FEF003D378C /* UIScrollView+JHRefresh.m in Sources */,
