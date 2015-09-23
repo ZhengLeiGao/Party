@@ -1,0 +1,30 @@
+//
+//  Party-Prefix.pch
+//  Party
+//
+//  Created by qianfeng on 15/9/18.
+//  Copyright (c) 2015年 高正磊. All rights reserved.
+//
+
+#ifndef Party_Party_Prefix_pch
+#define Party_Party_Prefix_pch
+
+
+
+#import <Availability.h>
+
+#ifndef __IPHONE_3_0
+#warning "This project uses features only available in iOS SDK 3.0 and later."
+#endif
+
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import "Define.h"
+
+#endif
+
+
+
+
+#endif

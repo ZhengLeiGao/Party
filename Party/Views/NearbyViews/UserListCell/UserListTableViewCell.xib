@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserListTableViewCell" id="KGk-i7-Jjw" customClass="UserListTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6bY-J6-DNc">
+                        <rect key="frame" x="15" y="10" width="60" height="60"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="60" id="1G8-4u-yMr"/>
+                            <constraint firstAttribute="width" constant="60" id="mYA-2X-niS"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vW2-zR-Xgj">
+                        <rect key="frame" x="90" y="10" width="100" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="7ZK-Cv-NJM"/>
+                            <constraint firstAttribute="width" constant="100" id="eiB-iV-eTf"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" weight="black" pointSize="15"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dSx-Dr-b2E">
+                        <rect key="frame" x="160" y="10" width="150" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="3i6-MF-zFq"/>
+                            <constraint firstAttribute="width" constant="150" id="9k8-hS-rhh"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Cf-48-Thk">
+                        <rect key="frame" x="90" y="49" width="210" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="Lb8-wh-Ytv"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vO4-dN-pyj">
+                        <rect key="frame" x="90" y="30" width="35" height="20"/>
+                        <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="35" id="EC9-mZ-IW9"/>
+                            <constraint firstAttribute="height" constant="20" id="YNJ-Il-cqI"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <state key="normal" title="20" image="boy.png">
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="vO4-dN-pyj" firstAttribute="top" secondItem="vW2-zR-Xgj" secondAttribute="bottom" id="12v-if-jFs"/>
+                    <constraint firstItem="vW2-zR-Xgj" firstAttribute="leading" secondItem="6bY-J6-DNc" secondAttribute="trailing" constant="15" id="2Nq-ix-J2b"/>
+                    <constraint firstAttribute="bottom" secondItem="5Cf-48-Thk" secondAttribute="bottom" constant="10" id="3re-Eb-x68"/>
+                    <constraint firstItem="dSx-Dr-b2E" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="Gmf-Al-Jzl"/>
+                    <constraint firstItem="vW2-zR-Xgj" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="KxM-2M-nja"/>
+                    <constraint firstItem="vO4-dN-pyj" firstAttribute="leading" secondItem="6bY-J6-DNc" secondAttribute="trailing" constant="15" id="LOd-8y-Oeu"/>
+                    <constraint firstItem="5Cf-48-Thk" firstAttribute="leading" secondItem="6bY-J6-DNc" secondAttribute="trailing" constant="15" id="Sye-1a-eS2"/>
+                    <constraint firstAttribute="trailing" secondItem="dSx-Dr-b2E" secondAttribute="trailing" constant="10" id="bZb-3n-cKW"/>
+                    <constraint firstItem="6bY-J6-DNc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="hAj-Nu-nSh"/>
+                    <constraint firstAttribute="trailing" secondItem="5Cf-48-Thk" secondAttribute="trailing" constant="20" id="kXZ-wM-bxK"/>
+                    <constraint firstItem="6bY-J6-DNc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="lJ6-m6-fVr"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="contentLabel" destination="5Cf-48-Thk" id="UbP-Kq-ouV"/>
+                <outlet property="nameLabel" destination="vW2-zR-Xgj" id="HBK-Ke-bSf"/>
+                <outlet property="timeLabel" destination="dSx-Dr-b2E" id="Dbt-oc-kzG"/>
+                <outlet property="userAge" destination="vO4-dN-pyj" id="i2J-63-rVs"/>
+                <outlet property="userImage" destination="6bY-J6-DNc" id="gKT-RE-23F"/>
+            </connections>
+            <point key="canvasLocation" x="289" y="278"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="boy.png" width="8" height="8"/>
+    </resources>
+</document>
