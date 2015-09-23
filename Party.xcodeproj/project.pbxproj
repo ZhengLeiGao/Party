@@ -363,6 +363,21 @@
 			path = userImages;
 			sourceTree = "<group>";
 		};
+		C51993A81BB2AA1D004EACC9 /* ActivityViews */ = {
+			isa = PBXGroup;
+			children = (
+				C51993A91BB2AA1D004EACC9 /* ActivityListCell */,
+			);
+			path = ActivityViews;
+			sourceTree = "<group>";
+		};
+		C51993A91BB2AA1D004EACC9 /* ActivityListCell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ActivityListCell;
+			sourceTree = "<group>";
+		};
 		C56F5B3D1BB0F20A003D378C /* AFNetworking */ = {
 			isa = PBXGroup;
 			children = (
@@ -709,6 +724,7 @@
 		C5971FC61BABF8F000707F54 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C51993A81BB2AA1D004EACC9 /* ActivityViews */,
 				C56F5BB31BB0F60C003D378C /* NearbyViews */,
 			);
 			path = Views;
