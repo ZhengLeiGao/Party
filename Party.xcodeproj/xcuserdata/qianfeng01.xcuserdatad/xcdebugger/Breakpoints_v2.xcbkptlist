@@ -244,11 +244,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Party/Views/ActivityViews/ActivityListCell/ActivityListTableViewCell.m"
-            timestampString = "464710677.393298"
+            timestampString = "464764997.960797"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
+            startingLineNumber = "99"
+            endingLineNumber = "99"
             landmarkName = "-showDataWithModel:"
             landmarkType = "5">
          </BreakpointContent>

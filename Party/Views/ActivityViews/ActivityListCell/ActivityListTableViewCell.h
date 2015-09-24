@@ -24,6 +24,20 @@
 @property (weak, nonatomic) IBOutlet UIButton *userSexAndAge;
 @property (weak, nonatomic) IBOutlet UILabel *publishTime;
 
+
+@property (nonatomic, strong) UIView *collectionView;
+@property (nonatomic, strong) UIButton *collectButton;
+@property (nonatomic, strong) UILabel *countLabel;
+
+@property (nonatomic, strong) UIView *applyCountView;
+@property (nonatomic, strong) UILabel *appliedCountLabel;
+
+
+
+@property (nonatomic, strong) UIView *shareView;
+
+
+
 - (void)showDataWithModel:(ActivityModel *)model;
 
 
