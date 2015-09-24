@@ -1,39 +1,27 @@
 //
-//  LaunchActivityViewController.m
+//  FreeActivityViewController.m
 //  Party
 //
-//  Created by qianfeng on 15/9/18.
+//  Created by qianfeng on 15/9/24.
 //  Copyright (c) 2015年 高正磊. All rights reserved.
 //
 
-#import "LaunchActivityViewController.h"
+#import "FreeActivityViewController.h"
 
-@interface LaunchActivityViewController ()
-
-
-@property (nonatomic, strong) UIViewController *centerViewController;
-
+@interface FreeActivityViewController ()
 
 @end
 
-@implementation LaunchActivityViewController
+@implementation FreeActivityViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.title = @"发起活动";
-    self.view.backgroundColor = [UIColor blackColor];
-    
-   
-    
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-    
-
-    
 }
 
 /*

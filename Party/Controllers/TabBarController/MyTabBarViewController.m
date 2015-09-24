@@ -13,7 +13,7 @@
 #import "MessageViewController.h"
 #import "MineViewController.h"
 #import "GZLTabBarButton.h"
-
+#import "SettingButton.h"
 
 #define kContentFrame CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height - kTabbarHeight)
 #define  kDockFrame CGRectMake(0, self.view.frame.size.height - kTabbarHeight, self.view.frame.size.width, kTabbarHeight)
@@ -28,7 +28,10 @@
 
 
 
-@interface MyTabBarViewController ()
+@interface MyTabBarViewController () {
+
+    BOOL _isExpand;
+}
 
 @property(strong,nonatomic) UIView *tabbarView;//自定义个底部的tabbar视图
 @property(strong,nonatomic)UIView * popView;//点击"+"号弹出的视图,高斯模糊效果
@@ -53,7 +56,7 @@
     
     [self createViewControllers];
     
-
+    [self createButtons];
     
     
     
@@ -71,6 +74,9 @@
     ActivityViewController *actVC = [[ActivityViewController alloc] init];
     UINavigationController *actNav = [[UINavigationController alloc] initWithRootViewController:actVC];
     [vcArr addObject:actNav];
+    
+    
+
     
 //    LaunchActivityViewController *lauActVC = [[LaunchActivityViewController alloc] init];
 //    lauActVC.tabBarItem.image = [UIImage imageNamed: @"icon-top"];
@@ -93,9 +99,12 @@
 #pragma mark - 点击弹出的视图上的关闭按钮
 -(void)tapX
 {
-    //1.移除当前遮盖视图
-    [self.popView removeFromSuperview];
+    [self close];
     
+     _isExpand = NO;
+
+    
+   
 }
 
 #pragma mark - 点击自定义的那个tabbar视图上的按钮
@@ -107,6 +116,8 @@
         
         [UIView animateWithDuration:5 animations:^{
             [self.view addSubview:self.popView];//可以自定义一些控件加上动画的效果
+            
+            
         }];
         
         
@@ -219,8 +230,16 @@
 
 - (void)centerBtnClick:(UIButton *)button {
 
-    [UIView animateWithDuration:5 animations:^{
+
+    
+    
+    [UIView animateWithDuration:2 animations:^{
         [self.view addSubview:self.popView];//可以自定义一些控件加上动画的效果
+    
+        if (_isExpand == NO) {
+            [self expand];
+        }
+        _isExpand = !_isExpand;
     }];
     
 }
@@ -234,21 +253,10 @@
     CGFloat height=[s bounds].size.height;
     //点击中间的按钮弹出一个视图,是自定义的
     self.popView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, wid, height)];
-    
     self.popView.backgroundColor = [UIColor colorWithRed:0.25 green:0.25 blue:0.25 alpha:1.0];
     
-//    self.popView.backgroundColor = [UIColor grayColor];
-//    UILabel *label=[[UILabel alloc]initWithFrame:CGRectMake(100, 100, 100, 40)];
-//    [label setText:@"弹出视图!"];
-//    [label setTextColor:[UIColor blackColor]];
-//    [self.popView addSubview:label];
-    //底部的关闭按钮
-    
-//    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(_centerView.frame.origin.x,_centerView.frame.origin.y, _centerView.frame.size.width, _centerView.frame.size.height)];
-//
-    
+
     UIView *view = [[UIView alloc] initWithFrame:_centerView.frame];
-    
     [self.popView addSubview:view];
     
 //    GZLTabBarButton *button = [[GZLTabBarButton alloc] init];
@@ -266,7 +274,91 @@
     
 }
 
+//创建6个button
+- (void)createButtons {
 
+    CGFloat leftX = 20;
+//    CGFloat topY = ([UIScreen mainScreen].bounds.size.height - 200)/2;
+    
+    CGFloat XOff = ([UIScreen mainScreen].bounds.size.width - 3*64 - 40)/2;
+    
+    CGFloat YOff = 30;
+    
+    NSArray *titlesArr = @[@"吃饭",@"看电影",@"K歌",@"运动",@"出行",@"自定义"];
+
+    
+    for (int i = 0; i < 2; i ++) {
+        for (int j = 0; j < 3; j ++) {
+            SettingButton *button = [SettingButton buttonWithType:UIButtonTypeCustom];
+            
+            [button setFrame:CGRectMake(leftX + j*(64 + XOff), [UIScreen mainScreen].bounds.size.height + i * (80 + YOff), 64, 80)];
+            
+            
+            [button setImage:[UIImage imageNamed:[NSString stringWithFormat:@"publishActivity_%d",i*3 + j]] forState:UIControlStateNormal];
+            
+            button.contentMode = UIViewContentModeScaleAspectFit;
+            
+            [button setTitle:titlesArr[i*3 + j] forState:UIControlStateNormal];
+            
+            button.titleLabel.font = [UIFont systemFontOfSize:14.0];
+            button.titleLabel.textAlignment = NSTextAlignmentCenter;
+            
+            button.tag = 100 + i*3 + j;
+            [self.popView addSubview:button];
+        }
+    }
+}
+
+//弹出6个button
+- (void)expand
+{
+    for (int i = 0; i < 6; i++) {
+        UIButton *button = (UIButton *)[self.popView viewWithTag:100+i];
+        //第一个参数 动画的持续时间
+        //2   延迟多久执行动画
+        //3  阻尼系数  0--1
+        //4  每个view 的动画开始的初始的速度
+        [UIView animateWithDuration:0.5 delay:i*0.05 usingSpringWithDamping:0.5 initialSpringVelocity:30 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+#define Open 0
+#if Open
+            CGPoint newCenter = CGPointMake(center.x, center.y-400);
+            view.center = newCenter;
+#else
+            //放射变换 修改位置  水平或者竖直方向位置
+            
+            button.transform = CGAffineTransformMakeTranslation(0, -400);
+#endif
+            
+        } completion:^(BOOL finished) {
+            
+        }];
+    }
+}
+
+//button 返回原来的位置
+- (void)close
+{
+    for (int i = 0; i < 6; i++) {
+        UIButton *button = (UIButton *)[self.popView viewWithTag:100+i];
+
+        [UIView animateWithDuration:0.5 delay:i*0.05 usingSpringWithDamping:0.7 initialSpringVelocity:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+#if Open
+            CGPoint newCenter = CGPointMake(center.x, center.y+400);
+            view.center = newCenter;
+#else
+            button.transform = CGAffineTransformIdentity;
+#endif
+            
+        } completion:^(BOOL finished) {
+            //1.移除当前遮盖视图
+            [self.popView removeFromSuperview];
+        }];
+    }
+    
+}
+
+
+#pragma mark - didReceiveMemoryWarning
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

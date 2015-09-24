@@ -43,8 +43,8 @@
         
         button.frame = CGRectMake(btnX, btnY, btnW, btnH);
         
-        NSString *imageName = [NSString stringWithFormat:@"TabBar%ld",i + 1];
-        NSString *selImageName = [NSString stringWithFormat:@"TabBar%ldSel",i + 1];
+        NSString *imageName = [NSString stringWithFormat:nil];
+        NSString *selImageName = [NSString stringWithFormat:nil];
         
         NSString *title = @"";
         
