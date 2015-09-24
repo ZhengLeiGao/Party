@@ -170,11 +170,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Party/Controllers/&#x9644;&#x8fd1;/NearbyViewController.m"
-            timestampString = "464672369.862707"
+            timestampString = "464773453.951862"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "167"
-            endingLineNumber = "167"
+            startingLineNumber = "172"
+            endingLineNumber = "172"
             landmarkName = "-createRefreshView"
             landmarkType = "5">
          </BreakpointContent>
@@ -186,11 +186,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Party/Controllers/&#x9644;&#x8fd1;/NearbyViewController.m"
-            timestampString = "464672369.862707"
+            timestampString = "464773453.951862"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "166"
-            endingLineNumber = "166"
+            startingLineNumber = "171"
+            endingLineNumber = "171"
             landmarkName = "-createRefreshView"
             landmarkType = "5">
          </BreakpointContent>
@@ -244,11 +244,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Party/Views/ActivityViews/ActivityListCell/ActivityListTableViewCell.m"
-            timestampString = "464764997.960797"
+            timestampString = "464772192.824302"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "99"
-            endingLineNumber = "99"
+            startingLineNumber = "112"
+            endingLineNumber = "112"
             landmarkName = "-showDataWithModel:"
             landmarkType = "5">
          </BreakpointContent>

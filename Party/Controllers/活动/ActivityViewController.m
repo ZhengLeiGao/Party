@@ -108,6 +108,7 @@
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     [self.view addSubview:self.tableView];
+    [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
     [self.tableView registerNib:[UINib nibWithNibName:@"ActivityListTableViewCell" bundle:nil] forCellReuseIdentifier:@"ActivityListTableViewCell"];
 }
 
@@ -140,6 +141,8 @@
     
     [cell showDataWithModel:model];
     
+    [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
+    
     return cell;
     
     
@@ -153,7 +156,13 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    NSLog(@"fcdf");
+    
 }
+
+
+
 
 
 #pragma mark - 刷新

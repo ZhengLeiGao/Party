@@ -112,6 +112,9 @@
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     [self.view addSubview:self.tableView];
+    
+
+    
     [self.tableView registerNib:[UINib nibWithNibName:@"UserListTableViewCell" bundle:nil] forCellReuseIdentifier:@"UserListTableViewCell"];
 }
 
@@ -139,6 +142,8 @@
     UserModel *model = self.dataArr[indexPath.row];
     
     [cell showDataWithModel:model];
+
+    [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
 
     return cell;
 }
