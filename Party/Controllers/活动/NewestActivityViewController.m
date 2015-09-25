@@ -35,7 +35,7 @@
     
     self.view.backgroundColor = [UIColor clearColor];
     self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:0.25 green:0.25 blue:0.25 alpha:1.0];
-    [self createNavigationItem];
+//    [self createNavigationItem];
     [self createTableView];
     [self createRefreshView];
     

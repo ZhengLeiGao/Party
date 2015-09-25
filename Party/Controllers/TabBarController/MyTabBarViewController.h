@@ -10,4 +10,7 @@
 
 @interface MyTabBarViewController : UITabBarController
 
+@property(strong,nonatomic) UIView *tabbarView;//自定义个底部的tabbar视图
+@property (nonatomic, strong) UIView *centerView;
+
 @end

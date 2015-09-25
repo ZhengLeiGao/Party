@@ -33,10 +33,10 @@
     BOOL _isExpand;
 }
 
-@property(strong,nonatomic) UIView *tabbarView;//自定义个底部的tabbar视图
+//@property(strong,nonatomic) UIView *tabbarView;//自定义个底部的tabbar视图
 @property(strong,nonatomic)UIView * popView;//点击"+"号弹出的视图,高斯模糊效果
 
-@property (nonatomic, strong) UIView *centerView;
+//@property (nonatomic, strong) UIView *centerView;
 
 @property (nonatomic, strong) UIButton *centerBtn;
 
@@ -117,7 +117,6 @@
         [UIView animateWithDuration:5 animations:^{
             [self.view addSubview:self.popView];//可以自定义一些控件加上动画的效果
             
-            
         }];
         
         
@@ -175,8 +174,6 @@
         NSString *selImageName = [NSString stringWithFormat:@"TabBar%dSel",i + 1];
         [button setImage:[UIImage imageNamed:imageName] forState:UIControlStateNormal];
         [button setImage:[UIImage imageNamed:selImageName] forState:UIControlStateSelected];
-//        [button setImage:[[UIImage imageNamed:selImageName] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] forState:UIControlStateSelected];
-        
         button.imageView.contentMode = UIViewContentModeCenter;
         [button setTitle:titlesArr[i] forState:UIControlStateNormal];
         button.titleLabel.font = [UIFont systemFontOfSize:11.0];
@@ -358,12 +355,19 @@
 }
 
 
+
+
+
+
+
+
+
+
+
 #pragma mark - didReceiveMemoryWarning
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-
 
 @end

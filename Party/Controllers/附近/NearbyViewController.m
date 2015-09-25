@@ -11,6 +11,10 @@
 #import "UserModel.h"
 #import "HobbyListModel.h"
 #import "JHRefresh.h"
+
+#import "UserInfoViewController.h"
+
+
 @interface NearbyViewController () <UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray *dataArr;
@@ -156,6 +160,14 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
+    
+    
+    UserInfoViewController *user = [[UserInfoViewController alloc] init];
+    
+    
+    [self.navigationController pushViewController:user animated:YES];
+    
+    
     
 }
 
