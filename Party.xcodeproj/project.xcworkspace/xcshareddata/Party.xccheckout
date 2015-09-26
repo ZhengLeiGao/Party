@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>5539DBC3-A7DA-4E58-B7C3-09B07A81C0B0</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>Party</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>4CD07767FAC44CFDAB1DB709F8D4E18EB762D458</key>
 		<string>https://github.com/ZhengLeiGao/Party.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Party.xcodeproj/project.xcworkspace</string>
+	<string>Party.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>4CD07767FAC44CFDAB1DB709F8D4E18EB762D458</key>

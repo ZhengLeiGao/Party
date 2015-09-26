@@ -131,7 +131,9 @@
 		C5F3D2F61BB02858005DCD6C /* icon-top@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5F3D2F51BB02858005DCD6C /* icon-top@2x.png */; };
 		C5F98DE71BB5268E0011DB81 /* UserInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F98DE61BB5268E0011DB81 /* UserInfoViewController.m */; };
 		C5F98DEC1BB52EEA0011DB81 /* UserInfoHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F98DEB1BB52EEA0011DB81 /* UserInfoHeaderView.m */; };
-		C5F98DF01BB530610011DB81 /* UserInfoHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5F98DEF1BB530610011DB81 /* UserInfoHeaderView.xib */; };
+		C5FA95151BB6B1C2004FFFCE /* UINavigationBar+Awesome.m in Sources */ = {isa = PBXBuildFile; fileRef = C5FA95141BB6B1C2004FFFCE /* UINavigationBar+Awesome.m */; };
+		C5FA95181BB6BC6A004FFFCE /* chat@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5FA95161BB6BC6A004FFFCE /* chat@2x.png */; };
+		C5FA95191BB6BC6A004FFFCE /* report@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5FA95171BB6BC6A004FFFCE /* report@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -370,7 +372,10 @@
 		C5F98DE61BB5268E0011DB81 /* UserInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoViewController.m; sourceTree = "<group>"; };
 		C5F98DEA1BB52EEA0011DB81 /* UserInfoHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoHeaderView.h; sourceTree = "<group>"; };
 		C5F98DEB1BB52EEA0011DB81 /* UserInfoHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoHeaderView.m; sourceTree = "<group>"; };
-		C5F98DEF1BB530610011DB81 /* UserInfoHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserInfoHeaderView.xib; sourceTree = "<group>"; };
+		C5FA95131BB6B1C2004FFFCE /* UINavigationBar+Awesome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+Awesome.h"; sourceTree = "<group>"; };
+		C5FA95141BB6B1C2004FFFCE /* UINavigationBar+Awesome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+Awesome.m"; sourceTree = "<group>"; };
+		C5FA95161BB6BC6A004FFFCE /* chat@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chat@2x.png"; sourceTree = "<group>"; };
+		C5FA95171BB6BC6A004FFFCE /* report@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "report@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -838,6 +843,7 @@
 		C5971FC41BABF8F000707F54 /* ThirdLibs */ = {
 			isa = PBXGroup;
 			children = (
+				C5FA95121BB6B197004FFFCE /* UINavigationLib */,
 				C5A096DE1BB3F3BC006CFF3A /* WMPageController */,
 				C56F5BE91BB16FEE003D378C /* JHRefresh */,
 				C56F5BC81BB16F2B003D378C /* MMProgressHUD */,
@@ -1107,7 +1113,6 @@
 			children = (
 				C5F98DEA1BB52EEA0011DB81 /* UserInfoHeaderView.h */,
 				C5F98DEB1BB52EEA0011DB81 /* UserInfoHeaderView.m */,
-				C5F98DEF1BB530610011DB81 /* UserInfoHeaderView.xib */,
 			);
 			path = UserInfoHeaderView;
 			sourceTree = "<group>";
@@ -1115,8 +1120,19 @@
 		C5F98DF11BB538C90011DB81 /* UserInfoImages */ = {
 			isa = PBXGroup;
 			children = (
+				C5FA95161BB6BC6A004FFFCE /* chat@2x.png */,
+				C5FA95171BB6BC6A004FFFCE /* report@2x.png */,
 			);
 			path = UserInfoImages;
+			sourceTree = "<group>";
+		};
+		C5FA95121BB6B197004FFFCE /* UINavigationLib */ = {
+			isa = PBXGroup;
+			children = (
+				C5FA95131BB6B1C2004FFFCE /* UINavigationBar+Awesome.h */,
+				C5FA95141BB6B1C2004FFFCE /* UINavigationBar+Awesome.m */,
+			);
+			path = UINavigationLib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1202,6 +1218,7 @@
 				C5F3D2451BAFAB70005DCD6C /* icon-topSel@2x.png in Resources */,
 				C5F3D2F61BB02858005DCD6C /* icon-top@2x.png in Resources */,
 				C51993C51BB2C436004EACC9 /* collecteAct@2x.png in Resources */,
+				C5FA95191BB6BC6A004FFFCE /* report@2x.png in Resources */,
 				C51993C91BB2C436004EACC9 /* shareAct@2x.png in Resources */,
 				C51993C71BB2C436004EACC9 /* jionAct@2x.png in Resources */,
 				C5102A711BB24C350034D291 /* girl@2x.png in Resources */,
@@ -1227,8 +1244,8 @@
 				C51993C81BB2C436004EACC9 /* share@2x.png in Resources */,
 				C5C4B5FB1BAE554100167137 /* TabBar5@2x.png in Resources */,
 				C51993C61BB2C436004EACC9 /* isFree@2x.png in Resources */,
+				C5FA95181BB6BC6A004FFFCE /* chat@2x.png in Resources */,
 				C5102A6D1BB24C350034D291 /* juli@2x.png in Resources */,
-				C5F98DF01BB530610011DB81 /* UserInfoHeaderView.xib in Resources */,
 				C5971FA81BABF7EC00707F54 /* Images.xcassets in Resources */,
 				C51993C41BB2C436004EACC9 /* collect_red@2x.png in Resources */,
 				C5102A6F1BB24C350034D291 /* nav_top_search@2x.png in Resources */,
@@ -1272,6 +1289,7 @@
 				C5971FF91BAC2BA700707F54 /* MessageViewController.m in Sources */,
 				C5F98DE71BB5268E0011DB81 /* UserInfoViewController.m in Sources */,
 				C56F5C081BB16FEF003D378C /* JHRefreshConfig.m in Sources */,
+				C5FA95151BB6B1C2004FFFCE /* UINavigationBar+Awesome.m in Sources */,
 				C5F036B51BAD335F008E8F11 /* GZLTabBarViewController.m in Sources */,
 				C56F5B9E1BB0F20A003D378C /* UIImage+GIF.m in Sources */,
 				C56F5B9C1BB0F20A003D378C /* SDWebImagePrefetcher.m in Sources */,

@@ -9,8 +9,9 @@
 #import "UserInfoViewController.h"
 #import "UserInfoHeaderView.h"
 #import "MyTabBarViewController.h"
+#import "UINavigationBar+Awesome.h"
 
-@interface UserInfoViewController () <UITableViewDataSource,UITableViewDelegate,UIScrollViewDelegate>
+@interface UserInfoViewController () <UITableViewDataSource,UITableViewDelegate>
 
 @property (nonatomic, strong) UITableView *tableView;
 
@@ -24,34 +25,31 @@
 @implementation UserInfoViewController
 
 -(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:YES];
+    
     MyTabBarViewController* vc=(MyTabBarViewController*)self.tabBarController;
     vc.tabbarView.hidden=YES;
     vc.centerView.hidden=YES;
+    
+    [self scrollViewDidScroll:self.tableView];
+    [self.navigationController.navigationBar setShadowImage:[UIImage new]];
 }
 
 
 -(void)viewWillDisappear:(BOOL)animated{
+    
+    [super viewWillDisappear:YES];
     MyTabBarViewController* vc=(MyTabBarViewController*)self.tabBarController;
     vc.tabbarView.hidden=NO;
     vc.centerView.hidden=NO;
+    self.tableView.delegate = nil;
+    [self.navigationController.navigationBar lt_reset];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    
-    self.navigationController.navigationBar.barTintColor = [UIColor clearColor];
-
-    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed: @"nav_top_search"] forBarMetrics:UIBarMetricsCompact];
-
-//    self.extendedLayoutIncludesOpaqueBars = YES;
-    
-    
-    self.navigationController.navigationBar.backgroundColor = [UIColor clearColor];
-    
-//    self.navigationController.navigationBar.barStyle = UIBarStyleDefault;
-    
-    self.view.backgroundColor = [UIColor grayColor];
+    [self.navigationController.navigationBar lt_setBackgroundColor:[UIColor clearColor]];
     
     [self createTableView];
     
@@ -61,15 +59,9 @@
 - (void)createTableView {
 
     self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height - 44)];
-    
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
-    
-//    self.tableView.backgroundColor = [UIColor redColor];
-    
-
     [self createTableViewHeaderView];
-    
     [self.view addSubview:self.tableView];
 }
 
@@ -78,16 +70,8 @@
     self.headerView = [[UserInfoHeaderView alloc] init];
     
     self.tableView.tableHeaderView = self.headerView;
-    
-    self.tableView.bounces = NO;
 
-    
-    
-//    self.tableView.separatorInset=UIEdgeInsetsZero;
-//    self.tableView.layoutMargins=UIEdgeInsetsZero;
-//    
-    
-    
+    self.tableView.bounces = NO;
 }
 
 
@@ -96,6 +80,25 @@
     UIView *footterView = [[UIView alloc] initWithFrame:CGRectMake(0, [UIScreen mainScreen].bounds.size.height - 44, [UIScreen mainScreen].bounds.size.width, 44)];
     footterView.backgroundColor = [UIColor colorWithRed:0.25 green:0.25 blue:0.25 alpha:1.0];
     [self.view addSubview:footterView];
+    
+    
+    UIButton *chatButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [chatButton setImage:[UIImage imageNamed: @"chat"] forState:UIControlStateNormal];
+    [chatButton setTitle:@"  聊天" forState:UIControlStateNormal];
+    [chatButton setFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width/2, 44)];
+    
+    chatButton.titleLabel.font = [UIFont systemFontOfSize:12.f];
+    
+    [footterView addSubview:chatButton];
+    
+    UIButton *reportButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [reportButton setImage:[UIImage imageNamed: @"report"] forState:UIControlStateNormal];
+    [reportButton setTitle:@"  拉黑/举报" forState:UIControlStateNormal];
+    [reportButton setFrame:CGRectMake([UIScreen mainScreen].bounds.size.width/2, 0, [UIScreen mainScreen].bounds.size.width/2, 44)];
+    
+    reportButton.titleLabel.font = [UIFont systemFontOfSize:12.f];
+    [footterView addSubview:reportButton];
+    
     
     
 }
@@ -124,33 +127,17 @@
 }
 
 
-// 滑动scrollView，并且手指离开时执行。一次有效滑动，只执行一次。
-// 当pagingEnabled属性为YES时，不调用，该方法
--(void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
-    
-//    NSLog(@%f,velocity.y);
-//    if (velocity.y > 0.0)
-//    {
-//        //向上滑动隐藏导航栏
-//        self.navigationController.navigationBar.hidden = NO;
-//    }else
-//    {
-//        //向下滑动显示导航栏
-//        self.navigationController.navigationBar.hidden = YES;
-//    }
+    UIColor * color = [UIColor colorWithRed:0.25 green:0.25 blue:0.25 alpha:1.0];
+    CGFloat offsetY = scrollView.contentOffset.y;
+    if (offsetY > 64) {
+        CGFloat alpha = (offsetY - 64)/64;
+        [self.navigationController.navigationBar lt_setBackgroundColor:[color colorWithAlphaComponent:alpha]];
+    } else {
+        [self.navigationController.navigationBar lt_setBackgroundColor:[color colorWithAlphaComponent:0]];
+    }
 }
-
-
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-
-    
-    [self.navigationController.navigationBar setBarTintColor:[UIColor orangeColor]];
-  
-    [self.navigationController.navigationBar setTranslucent:NO];
-}
-
-
 
 
 

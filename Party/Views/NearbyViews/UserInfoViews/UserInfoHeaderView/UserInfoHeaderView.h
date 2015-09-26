@@ -10,4 +10,5 @@
 
 @interface UserInfoHeaderView : UIView
 
+
 @end

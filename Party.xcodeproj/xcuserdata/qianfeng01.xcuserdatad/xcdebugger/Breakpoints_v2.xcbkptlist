@@ -260,11 +260,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Party/Views/NearbyViews/UserInfoViews/UserInfoHeaderView/UserInfoHeaderView.m"
-            timestampString = "464931822.558882"
+            timestampString = "464964607.637254"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "17"
-            endingLineNumber = "17"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
             landmarkName = "-init"
             landmarkType = "5">
          </BreakpointContent>
