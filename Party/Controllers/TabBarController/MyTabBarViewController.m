@@ -118,8 +118,6 @@
             [self.view addSubview:self.popView];//可以自定义一些控件加上动画的效果
             
         }];
-        
-        
     }
     
     else if(button.tag >= 13) //因为有5个按钮,现在只有4个ViewController,selectedIndex会向前移动一个

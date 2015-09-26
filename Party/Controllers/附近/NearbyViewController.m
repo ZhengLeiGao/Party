@@ -167,8 +167,6 @@
     
     [self.navigationController pushViewController:user animated:YES];
     
-    
-    
 }
 
 #pragma mark - 刷新

@@ -10,7 +10,7 @@
 #import "UserInfoHeaderView.h"
 #import "MyTabBarViewController.h"
 
-@interface UserInfoViewController () <UITableViewDataSource,UITableViewDelegate>
+@interface UserInfoViewController () <UITableViewDataSource,UITableViewDelegate,UIScrollViewDelegate>
 
 @property (nonatomic, strong) UITableView *tableView;
 
@@ -38,7 +38,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
+    
+    self.navigationController.navigationBar.barTintColor = [UIColor clearColor];
+
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed: @"nav_top_search"] forBarMetrics:UIBarMetricsCompact];
+
+//    self.extendedLayoutIncludesOpaqueBars = YES;
+    
+    
+    self.navigationController.navigationBar.backgroundColor = [UIColor clearColor];
+    
+//    self.navigationController.navigationBar.barStyle = UIBarStyleDefault;
     
     self.view.backgroundColor = [UIColor grayColor];
     
@@ -54,7 +65,12 @@
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     
+//    self.tableView.backgroundColor = [UIColor redColor];
+    
+
     [self createTableViewHeaderView];
+    
+    [self.view addSubview:self.tableView];
 }
 
 - (void)createTableViewHeaderView {
@@ -63,8 +79,13 @@
     
     self.tableView.tableHeaderView = self.headerView;
     
+    self.tableView.bounces = NO;
+
     
     
+//    self.tableView.separatorInset=UIEdgeInsetsZero;
+//    self.tableView.layoutMargins=UIEdgeInsetsZero;
+//    
     
     
 }
@@ -83,19 +104,51 @@
 #pragma mark - UITableViewDataSource & UITableViewDelegate
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 
-    return 2;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
-    return 6;
+    return 16;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 
-    return nil;
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
+    
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
+    }
+    
+    return cell;
 }
 
+
+// 滑动scrollView，并且手指离开时执行。一次有效滑动，只执行一次。
+// 当pagingEnabled属性为YES时，不调用，该方法
+-(void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset
+{
+    
+//    NSLog(@%f,velocity.y);
+//    if (velocity.y > 0.0)
+//    {
+//        //向上滑动隐藏导航栏
+//        self.navigationController.navigationBar.hidden = NO;
+//    }else
+//    {
+//        //向下滑动显示导航栏
+//        self.navigationController.navigationBar.hidden = YES;
+//    }
+}
+
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+
+    
+    [self.navigationController.navigationBar setBarTintColor:[UIColor orangeColor]];
+  
+    [self.navigationController.navigationBar setTranslucent:NO];
+}
 
 
 
