@@ -10,4 +10,8 @@
 
 @interface UserInfoViewController : BaseViewController
 
+
+- (id)initWithUId:(NSString *)uid userName:(NSString *)userName;
+
+
 @end

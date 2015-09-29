@@ -8,7 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+#import "UserInfoModel.h"
+
+
 @interface UserInfoHeaderView : UIView
 
+
+- (void)showInfoWithModel:(UserInfoModel *)model;
 
 @end

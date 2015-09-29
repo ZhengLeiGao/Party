@@ -22,6 +22,9 @@
 @property (nonatomic) NSInteger currentPage;
 @property (nonatomic) BOOL isRefreshing;
 @property (nonatomic) BOOL isLoadMore;
+@property (nonatomic, strong) UIView *filterView;
+
+@property (nonatomic) BOOL isClicked;
 @end
 
 @implementation NearbyViewController
@@ -39,7 +42,7 @@
     [self createAFNetwork];
     [self loadData];
     
-    
+    [self createFilterView];
 }
 
 #pragma mark - 创建导航上的按钮
@@ -54,8 +57,49 @@
 
 - (void)rightItemClick {
 
+    if (self.isClicked) {
+        self.isClicked = NO;
+        [UIView animateWithDuration:0.5 animations:^{
+            CGRect frame = CGRectMake(0, -1 * self.view.frame.size.height + 64, self.view.frame.size.width, self.view.frame.size.height - 64 - 49);
+            
+            self.filterView.frame = frame;
+            
+        } completion:^(BOOL finished) {
+            
+        }];
+        
+        return;
+    }
+    
+        [UIView animateWithDuration:0.5 animations:^{
+            CGRect frame = CGRectMake(0, 64, self.view.frame.size.width, self.view.frame.size.height - 64 -49);
+            
+            self.filterView.frame = frame;
+            
+        } completion:^(BOOL finished) {
+            
+        }];
+        self.isClicked = YES;
+}
+
+
+- (void)createFilterView {
+
+    self.isClicked = NO;
+    self.filterView = [[UIView alloc] initWithFrame:CGRectMake(0, -1 * self.view.frame.size.height + 64, self.view.frame.size.width, self.view.frame.size.height - 64 - 49)];
+    
+    self.filterView.backgroundColor = [UIColor grayColor];
+    self.filterView.alpha = 0.8;
+    [self.view addSubview:self.filterView];
+    
+    
+    NSLog(@"%@",self.filterView);
     
 }
+
+
+
+
 
 
 #pragma mark - 第一次下载数据
@@ -162,7 +206,9 @@
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
     
     
-    UserInfoViewController *user = [[UserInfoViewController alloc] init];
+    UserModel *model = self.dataArr[indexPath.row];
+    
+    UserInfoViewController *user = [[UserInfoViewController alloc] initWithUId:model.uid userName:model.uname];
     
     
     [self.navigationController pushViewController:user animated:YES];

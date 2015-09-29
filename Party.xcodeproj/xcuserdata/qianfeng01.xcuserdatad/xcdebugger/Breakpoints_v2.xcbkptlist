@@ -138,11 +138,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Party/Controllers/&#x9644;&#x8fd1;/NearbyViewController.m"
-            timestampString = "464862169.130281"
+            timestampString = "465224204.693889"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "101"
-            endingLineNumber = "101"
+            startingLineNumber = "146"
+            endingLineNumber = "146"
             landmarkName = "-loadData"
             landmarkType = "5">
          </BreakpointContent>
@@ -154,11 +154,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Party/Controllers/&#x9644;&#x8fd1;/NearbyViewController.m"
-            timestampString = "464862169.130281"
+            timestampString = "465224204.693889"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "94"
-            endingLineNumber = "94"
+            startingLineNumber = "139"
+            endingLineNumber = "139"
             landmarkName = "-loadData"
             landmarkType = "5">
          </BreakpointContent>
@@ -170,11 +170,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Party/Controllers/&#x9644;&#x8fd1;/NearbyViewController.m"
-            timestampString = "464931710.16336"
+            timestampString = "465224204.693889"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "182"
-            endingLineNumber = "182"
+            startingLineNumber = "229"
+            endingLineNumber = "229"
             landmarkName = "-createRefreshView"
             landmarkType = "5">
          </BreakpointContent>
@@ -186,11 +186,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Party/Controllers/&#x9644;&#x8fd1;/NearbyViewController.m"
-            timestampString = "464931710.16336"
+            timestampString = "465224204.693889"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "181"
-            endingLineNumber = "181"
+            startingLineNumber = "228"
+            endingLineNumber = "228"
             landmarkName = "-createRefreshView"
             landmarkType = "5">
          </BreakpointContent>
@@ -202,11 +202,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Party/Controllers/&#x9644;&#x8fd1;/NearbyViewController.m"
-            timestampString = "464862169.130281"
+            timestampString = "465224204.693889"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "72"
-            endingLineNumber = "72"
+            startingLineNumber = "117"
+            endingLineNumber = "117"
             landmarkName = "-loadData"
             landmarkType = "5">
          </BreakpointContent>
@@ -260,12 +260,44 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Party/Views/NearbyViews/UserInfoViews/UserInfoHeaderView/UserInfoHeaderView.m"
-            timestampString = "464964607.637254"
+            timestampString = "465206129.759608"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
             landmarkName = "-init"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Party/Controllers/&#x9644;&#x8fd1;/UserInfoViewController/UserInfoViewController.m"
+            timestampString = "465222407.803392"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "190"
+            endingLineNumber = "190"
+            landmarkName = "-tableView:cellForRowAtIndexPath:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Party/Controllers/&#x9644;&#x8fd1;/UserInfoViewController/UserInfoViewController.m"
+            timestampString = "465216732.528489"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "101"
+            endingLineNumber = "101"
+            landmarkName = "-getNetData"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

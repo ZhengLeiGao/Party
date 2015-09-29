@@ -8,11 +8,25 @@
 
 #import "UserInfoHeaderView.h"
 
+#import "UserInfoHeaderCenterView.h"
+
+
 @interface UserInfoHeaderView()
 
-@property UIImageView *backGroundImageView;
-@property UIImageView *userImageView;
-@property UIButton *addFriendButton;
+@property (nonatomic, strong) UIImageView *backGroundImageView;
+@property (nonatomic, strong) UIImageView *userImageView;
+@property (nonatomic, strong) UIButton *addFriendButton;
+
+@property (nonatomic, strong) UIButton *ageAndSexButton;
+
+@property (nonatomic, strong) UIButton *constellationButton;
+
+@property (nonatomic, strong) UIButton *distanceButton;
+@property (nonatomic, strong) UIButton *appearTimeButton;
+
+@property (nonatomic, strong) UserInfoHeaderCenterView *centerView;
+
+
 @end
 
 
@@ -42,7 +56,7 @@
     
     self.addFriendButton = [[UIButton alloc]init];
     [self.addFriendButton setFrame:CGRectMake(0, 0, 80, 25)];
-    self.addFriendButton.center = CGPointMake(self.userImageView.center.x, self.userImageView.center.y + 80);
+    self.addFriendButton.center = CGPointMake(self.userImageView.center.x, self.userImageView.center.y + 60);
     [self.addFriendButton setTitle:@"+加好友" forState:UIControlStateNormal];
     self.addFriendButton.titleLabel.font = [UIFont systemFontOfSize:12.f];
     self.addFriendButton.backgroundColor = [UIColor blueColor];
@@ -51,8 +65,42 @@
     [self addSubview:self.addFriendButton];
     
     
-
+    self.centerView = [[UserInfoHeaderCenterView alloc] init];
+    
+    self.centerView.frame = CGRectMake(0, self.addFriendButton.frame.origin.y + self.addFriendButton.frame.size.height + 5, [UIScreen mainScreen].bounds.size.width, 20);
+    
+    [self addSubview:self.centerView];
+    
 }
+
+
+- (void)showInfoWithModel:(UserInfoModel *)model {
+
+    
+    [self.backGroundImageView sd_setImageWithURL:[NSURL URLWithString:model.bg_img] placeholderImage:nil];
+    
+    [self.userImageView sd_setImageWithURL:[NSURL URLWithString:model.avatar] placeholderImage:nil];
+    
+    self.centerView.ageLabel.text = [model.age stringValue];
+    
+    
+    if (model.constellation == nil) {
+        self.centerView.constellationLabel.text = @" 未知 ";
+    } else {
+    
+        self.centerView.constellationLabel.text = [NSString stringWithFormat:@" %@ ",model.constellation];
+    }
+    
+    self.centerView.distanceLabel.text = model.distance;
+    
+    self.centerView.appearLabel.text = model.time;
+    
+    self.centerView.userIdLabel.text = [NSString stringWithFormat:@"用户id:%@",model.uid];
+    
+    
+}
+
+
 
 
 @end
